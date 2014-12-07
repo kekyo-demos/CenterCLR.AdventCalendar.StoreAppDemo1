@@ -1,0 +1,24 @@
+﻿<Page x:Class="CenterCLR.AdventCalendar.StoreAppDemo1.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:CenterCLR.AdventCalendar.StoreAppDemo1"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      mc:Ignorable="d">
+
+	<ListBox ItemsSource="{Binding Items}">
+		<ListBox.ItemTemplate>
+			<DataTemplate>
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<TextBlock Grid.Row="0" Text="{Binding Title}" />
+					<TextBlock Grid.Row="1" Text="{Binding Description}" />
+				</Grid>
+			</DataTemplate>
+		</ListBox.ItemTemplate>
+	</ListBox>
+</Page>
